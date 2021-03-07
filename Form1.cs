@@ -16,5 +16,24 @@ namespace Laboratorio_2_repaso
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_marca1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_alquilar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Form2 frm = new Form2();
+
+            frm.Show();
+        }
     }
 }
