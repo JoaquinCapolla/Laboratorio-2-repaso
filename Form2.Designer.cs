@@ -44,26 +44,27 @@ namespace Laboratorio_2_repaso
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txt_alquiler = new System.Windows.Forms.TextBox();
-            this.txt_devolucion = new System.Windows.Forms.TextBox();
             this.txt_recorridos = new System.Windows.Forms.TextBox();
             this.btn_agregar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.mnt_alquiler = new System.Windows.Forms.MonthCalendar();
+            this.mnt_devolucion = new System.Windows.Forms.MonthCalendar();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(131, 17);
+            this.comboBox1.Location = new System.Drawing.Point(131, 22);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(72, 20);
+            this.label1.Location = new System.Drawing.Point(72, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 1;
@@ -108,7 +109,7 @@ namespace Laboratorio_2_repaso
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 52);
+            this.label4.Location = new System.Drawing.Point(32, 78);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 13);
             this.label4.TabIndex = 6;
@@ -117,7 +118,7 @@ namespace Laboratorio_2_repaso
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(56, 78);
+            this.label5.Location = new System.Drawing.Point(56, 52);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 13);
             this.label5.TabIndex = 7;
@@ -134,14 +135,14 @@ namespace Laboratorio_2_repaso
             // 
             // txt_nombre
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(131, 49);
+            this.txt_nombre.Location = new System.Drawing.Point(131, 75);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(238, 20);
             this.txt_nombre.TabIndex = 9;
             // 
             // txt_nit
             // 
-            this.txt_nit.Location = new System.Drawing.Point(131, 75);
+            this.txt_nit.Location = new System.Drawing.Point(131, 49);
             this.txt_nit.Name = "txt_nit";
             this.txt_nit.Size = new System.Drawing.Size(238, 20);
             this.txt_nit.TabIndex = 10;
@@ -156,7 +157,7 @@ namespace Laboratorio_2_repaso
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(37, 130);
+            this.label7.Location = new System.Drawing.Point(37, 156);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(88, 13);
             this.label7.TabIndex = 12;
@@ -165,7 +166,7 @@ namespace Laboratorio_2_repaso
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 156);
+            this.label8.Location = new System.Drawing.Point(337, 156);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(107, 13);
             this.label8.TabIndex = 13;
@@ -174,60 +175,59 @@ namespace Laboratorio_2_repaso
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(54, 182);
+            this.label9.Location = new System.Drawing.Point(54, 130);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(71, 13);
             this.label9.TabIndex = 14;
             this.label9.Text = "Km recorridos";
             // 
-            // txt_alquiler
-            // 
-            this.txt_alquiler.Location = new System.Drawing.Point(131, 127);
-            this.txt_alquiler.Name = "txt_alquiler";
-            this.txt_alquiler.Size = new System.Drawing.Size(238, 20);
-            this.txt_alquiler.TabIndex = 15;
-            // 
-            // txt_devolucion
-            // 
-            this.txt_devolucion.Location = new System.Drawing.Point(131, 153);
-            this.txt_devolucion.Name = "txt_devolucion";
-            this.txt_devolucion.Size = new System.Drawing.Size(238, 20);
-            this.txt_devolucion.TabIndex = 16;
-            // 
             // txt_recorridos
             // 
-            this.txt_recorridos.Location = new System.Drawing.Point(131, 179);
+            this.txt_recorridos.Location = new System.Drawing.Point(131, 127);
             this.txt_recorridos.Name = "txt_recorridos";
             this.txt_recorridos.Size = new System.Drawing.Size(238, 20);
             this.txt_recorridos.TabIndex = 17;
             // 
             // btn_agregar
             // 
-            this.btn_agregar.Location = new System.Drawing.Point(375, 177);
+            this.btn_agregar.Location = new System.Drawing.Point(375, 125);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(75, 23);
             this.btn_agregar.TabIndex = 18;
             this.btn_agregar.Text = "Agregar";
             this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 214);
+            this.dataGridView1.Location = new System.Drawing.Point(23, 347);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 224);
+            this.dataGridView1.Size = new System.Drawing.Size(783, 177);
             this.dataGridView1.TabIndex = 19;
+            // 
+            // mnt_alquiler
+            // 
+            this.mnt_alquiler.Location = new System.Drawing.Point(131, 156);
+            this.mnt_alquiler.Name = "mnt_alquiler";
+            this.mnt_alquiler.TabIndex = 20;
+            // 
+            // mnt_devolucion
+            // 
+            this.mnt_devolucion.Location = new System.Drawing.Point(456, 156);
+            this.mnt_devolucion.Name = "mnt_devolucion";
+            this.mnt_devolucion.TabIndex = 21;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(818, 536);
+            this.Controls.Add(this.mnt_devolucion);
+            this.Controls.Add(this.mnt_alquiler);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.txt_recorridos);
-            this.Controls.Add(this.txt_devolucion);
-            this.Controls.Add(this.txt_alquiler);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -268,10 +268,10 @@ namespace Laboratorio_2_repaso
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txt_alquiler;
-        private System.Windows.Forms.TextBox txt_devolucion;
         private System.Windows.Forms.TextBox txt_recorridos;
         private System.Windows.Forms.Button btn_agregar;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.MonthCalendar mnt_alquiler;
+        private System.Windows.Forms.MonthCalendar mnt_devolucion;
     }
 }

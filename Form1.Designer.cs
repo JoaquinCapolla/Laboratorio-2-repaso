@@ -29,11 +29,11 @@ namespace Laboratorio_2_repaso
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_placa = new System.Windows.Forms.TextBox();
+            this.txt_marca = new System.Windows.Forms.TextBox();
+            this.txt_modelo = new System.Windows.Forms.TextBox();
+            this.txt_color = new System.Windows.Forms.TextBox();
+            this.txt_tarifa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,40 +52,41 @@ namespace Laboratorio_2_repaso
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_vehiculos)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txt_placa
             // 
-            this.textBox1.Location = new System.Drawing.Point(119, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.txt_placa.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_placa.Location = new System.Drawing.Point(119, 36);
+            this.txt_placa.Name = "txt_placa";
+            this.txt_placa.Size = new System.Drawing.Size(100, 20);
+            this.txt_placa.TabIndex = 0;
             // 
-            // textBox2
+            // txt_marca
             // 
-            this.textBox2.Location = new System.Drawing.Point(119, 62);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.txt_marca.Location = new System.Drawing.Point(119, 62);
+            this.txt_marca.Name = "txt_marca";
+            this.txt_marca.Size = new System.Drawing.Size(100, 20);
+            this.txt_marca.TabIndex = 1;
             // 
-            // textBox3
+            // txt_modelo
             // 
-            this.textBox3.Location = new System.Drawing.Point(119, 88);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 2;
+            this.txt_modelo.Location = new System.Drawing.Point(119, 88);
+            this.txt_modelo.Name = "txt_modelo";
+            this.txt_modelo.Size = new System.Drawing.Size(100, 20);
+            this.txt_modelo.TabIndex = 2;
             // 
-            // textBox4
+            // txt_color
             // 
-            this.textBox4.Location = new System.Drawing.Point(119, 114);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 3;
+            this.txt_color.Location = new System.Drawing.Point(119, 114);
+            this.txt_color.Name = "txt_color";
+            this.txt_color.Size = new System.Drawing.Size(100, 20);
+            this.txt_color.TabIndex = 3;
             // 
-            // textBox5
+            // txt_tarifa
             // 
-            this.textBox5.Location = new System.Drawing.Point(119, 140);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 4;
+            this.txt_tarifa.Location = new System.Drawing.Point(119, 140);
+            this.txt_tarifa.Name = "txt_tarifa";
+            this.txt_tarifa.Size = new System.Drawing.Size(100, 20);
+            this.txt_tarifa.TabIndex = 4;
             // 
             // label1
             // 
@@ -150,6 +151,7 @@ namespace Laboratorio_2_repaso
             this.btn_agregar.TabIndex = 11;
             this.btn_agregar.Text = "Agregar";
             this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // dataGridView_vehiculos
             // 
@@ -177,6 +179,7 @@ namespace Laboratorio_2_repaso
             this.button1.TabIndex = 14;
             this.button1.Text = "Vehiculo con mas km";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lbl_marca
             // 
@@ -246,11 +249,11 @@ namespace Laboratorio_2_repaso
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_tarifa);
+            this.Controls.Add(this.txt_color);
+            this.Controls.Add(this.txt_modelo);
+            this.Controls.Add(this.txt_marca);
+            this.Controls.Add(this.txt_placa);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -262,11 +265,11 @@ namespace Laboratorio_2_repaso
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_placa;
+        private System.Windows.Forms.TextBox txt_marca;
+        private System.Windows.Forms.TextBox txt_modelo;
+        private System.Windows.Forms.TextBox txt_color;
+        private System.Windows.Forms.TextBox txt_tarifa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
